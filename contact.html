@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About me</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <header>
+            <h1>Welcome to My Website</h1>
+            <img src="me.png" alt="My Photo" class="profile-photo">
+        </header>
+    
+        <h1>About Me</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="collection.html">Collection</a>
+            <a href="contact.html">Contact Me</a>
+        </nav>
+    </header>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>If you'd like to get in touch, feel free to email me at personalsupport@gmail.com .</p>
+        <button class="contact-button">Contact Me</button>
+</section>
+<script>
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    <footer>
+    <p>&copy; 2024 My Website</p>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+</footer>
+    function revealGalleryItems() {
+        galleryItems.forEach(item => {
+            const itemTop = item.getBoundingClientRect().top;
+            const triggerPoint = window.innerHeight / 1.2;
+            
+            if (itemTop < triggerPoint) {
+                item.style.opacity = '1';
+                item.style.transform = 'translateY(0)';
+            }
+        });
+    }
+
+    window.addEventListener('scroll', revealGalleryItems);
+</script>
+
+
+</body>
+</html>

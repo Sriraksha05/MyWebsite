@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About me</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Website</h1>
+        <img src="me.png" alt="My Photo" class="profile-photo">
+    </header>
+
+    <header>
+        <h1>About Me</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="collection.html">Collection</a>
+            <a href="contact.html">Contact Me</a>
+        </nav>
+    </header>
+
+    <section id="about">
+        <p>Hello! I’m Sriraksha, a passionate, extroverted creator who finds joy in connecting with people and embracing life’s little wonders. As a soft-hearted person with a strong sense of empathy, I love making others feel valued and appreciated, whether I'm working on a project, hosting an event, or simply having a heartfelt conversation.
+
+            Creativity fuels me, whether it’s through drawing, photography, dancing, or decorating. I’m always looking for fresh ways to transform spaces and create experiences that others will cherish. I’m also a keen traveler, excited by the chance to explore new places and cultures, finding inspiration in the diverse beauty of the world. Cooking and trying out new recipes bring me happiness, adding warmth and flavor to my everyday life.
+            
+            I find happiness in the little things, like a friendly smile, a vibrant sunset, or the sense of accomplishment from a finished project. Driven by a love for exploring new things and staying engaged, I’m always seeking ways to grow and share my creativity. Whether through my designs, my art, or my travels, I aim to make a positive impact and connect with those around me on a meaningful level.</p>
+    </section>
+    <footer>
+        <p>&copy; 2024 My Website</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+    <script>
+        const galleryItems = document.querySelectorAll('.gallery-item');
+    
+        function revealGalleryItems() {
+            galleryItems.forEach(item => {
+                const itemTop = item.getBoundingClientRect().top;
+                const triggerPoint = window.innerHeight / 1.2;
+                
+                if (itemTop < triggerPoint) {
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateY(0)';
+                }
+            });
+        }
+    
+        window.addEventListener('scroll', revealGalleryItems);
+    </script>
+    
+
+    
+</body>
+</html>
